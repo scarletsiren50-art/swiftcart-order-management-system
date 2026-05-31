@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftCart Order System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+    <!-- Background Animation -->
+    <div class="bg-animation"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="nav-left">
+
+            <img src="assets/logo.png" class="logo">
+
+            <div>
+                <h2>Swift<span>Cart</span></h2>
+                <p>Smart Order Validation & Delivery System</p>
+            </div>
+
+        </div>
+
+        <div class="nav-right">
+
+            <div class="nav-item">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Order Validation</span>
+            </div>
+
+            <div class="nav-item">
+                <i class="fa-solid fa-box"></i>
+                <span>Inventory</span>
+            </div>
+
+            <div class="nav-item">
+                <i class="fa-solid fa-truck"></i>
+                <span>Tracking</span>
+            </div>
+
+            <div class="nav-item">
+                <i class="fa-solid fa-bell"></i>
+                <span>Notifications</span>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- LEFT SIDE -->
+        <div class="left-panel">
+
+            <h3>Welcome to</h3>
+
+            <h1>Swift<span>Cart</span></h1>
+
+            <p class="description">
+                Your one-stop solution for smart order
+                management and delivery tracking.
+            </p>
+
+            <!-- STATS -->
+            <div class="stats-container">
+
+                <div class="stat-box">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <h2>128+</h2>
+                    <p>Total Orders</p>
+                </div>
+
+                <div class="stat-box active-box">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h2>54</h2>
+                    <p>Active Deliveries</p>
+                </div>
+
+                <div class="stat-box">
+                    <i class="fa-solid fa-cube"></i>
+                    <h2>22</h2>
+                    <p>Inventory Items</p>
+                </div>
+
+            </div>
+
+            <!-- FUTURE SCOPE -->
+            <div class="future-scope">
+
+                <h3>Future Enhancements</h3>
+
+                <div class="future-grid">
+
+                    <div class="future-card">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <p>Payment Gateway</p>
+                    </div>
+
+                    <div class="future-card">
+                        <i class="fa-solid fa-database"></i>
+                        <p>Backend Integration</p>
+                    </div>
+
+                    <div class="future-card">
+                        <i class="fa-solid fa-brain"></i>
+                        <p>AI Prediction</p>
+                    </div>
+
+                    <div class="future-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Email & SMS</p>
+                    </div>
+
+                    <div class="future-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Live Tracking</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="card">
+
+            <h2>
+                <i class="fa-solid fa-cart-shopping"></i>
+                Place Your Order
+            </h2>
+
+            <form id="orderForm">
+
+                <div class="input-group">
+                    <label>Customer Name</label>
+
+                    <input type="text"
+                    id="customerName"
+                    placeholder="Enter customer name">
+                </div>
+
+                <div class="input-group">
+                    <label>Product</label>
+
+                    <select id="product">
+                        <option value="">Select Product</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Headphones">Headphones</option>
+                        <option value="Keyboard">Keyboard</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Quantity</label>
+
+                    <input type="number"
+                    id="quantity"
+                    placeholder="Enter quantity">
+                </div>
+
+                <div class="input-group">
+                    <label>Payment Method</label>
+
+                    <select id="payment">
+                        <option value="">Select Payment Method</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Card">Card</option>
+                        <option value="Cash on Delivery">
+                            Cash on Delivery
+                        </option>
+                    </select>
+                </div>
+
+                <button type="submit">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Confirm Order
+                </button>
+
+            </form>
+
+            <!-- Loader -->
+            <div class="loader" id="loader"></div>
+
+            <!-- Result -->
+            <div id="result"></div>
+
+            <!-- Tracking -->
+            <div class="tracking-section"
+            id="trackingSection">
+
+                <h3>Order Tracking</h3>
+
+                <div class="tracking-steps">
+
+                    <div class="step active">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <p>Confirmed</p>
+                    </div>
+
+                    <div class="step">
+                        <i class="fa-solid fa-box"></i>
+                        <p>Packed</p>
+                    </div>
+
+                    <div class="step">
+                        <i class="fa-solid fa-truck"></i>
+                        <p>Shipped</p>
+                    </div>
+
+                    <div class="step">
+                        <i class="fa-solid fa-house"></i>
+                        <p>Delivered</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        Order Successfully Placed!
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
