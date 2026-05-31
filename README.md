@@ -33,6 +33,10 @@ The system is designed using a modern glassmorphism-inspired UI with interactive
 
 🖼️ [View Business Flow Diagram](docs/BusinessFlow.png)
 
+## Project Demo Video
+
+🎥 [Watch Demo Video](docs/Project%20Demo%20Video.mp4)
+
 ---
 
 # Project Features
